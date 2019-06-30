@@ -1,3 +1,7 @@
+set number
+highlight LineNr ctermfg=grey
+
+
 call plug#begin('~/.vim/plugged')
 
 " Latex Stuff
