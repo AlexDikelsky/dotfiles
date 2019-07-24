@@ -1,16 +1,14 @@
-set number
-highlight LineNr ctermfg=grey
-
-
 call plug#begin('~/.vim/plugged')
 
-" Latex Stuff
-Plug 'https://github.com/lervag/vimtex.git'
-
-" Bash command stuff
-Plug 'https://github.com/WolfgangMehner/vim-plugins'
-
-" nerdtree
-Plug 'scrooloose/nerdtree'
+"Latex plugin
+Plug 'lervag/vimtex'
 
 call plug#end()
+
+autocmd Filetype tex setlocal tabstop=2 
+"Decreases tab space for latex
+
+
+" Adds relative line numbers
+:set number relativenumber
+:highlight LineNr ctermfg=grey
