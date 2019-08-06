@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+set nocompatible
+
 "Latex plugin
 Plug 'lervag/vimtex'
 
