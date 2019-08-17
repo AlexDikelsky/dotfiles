@@ -2,10 +2,7 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-
-"Latex plugin
-Plug 'lervag/vimtex'
-Plug 'scrooloose/nerdtree'
+	Plug 'lervag/vimtex'
 
 call plug#end()
 
