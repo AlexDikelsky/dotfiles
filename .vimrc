@@ -1,8 +1,9 @@
 " lets `leader` stand for `,`. useful for not breaking things
 let mapleader = ","
-
 let localmapleader = "\\"
+set foldlevelstart=0
 
+" Examples ——————————————————————————--- {{{
 " echo ">^.^<"
 " usage of echo. echom puts what;s in the quotes into :messages
 
@@ -22,6 +23,7 @@ let localmapleader = "\\"
 " the one without escape doesnt work because it just does whatever happens when `dd` is inserted " You need to do <esc> first
 "imap <c-d> dd
 "imap <c-d> <esc>ddi
+" }}}
 
 set relativenumber number
 
@@ -53,6 +55,7 @@ augroup insert_line
 	nnoremap <leader>o o<esc>k
 augroup END
 
+" Vimscript file settings ---------------------- {{{
 " Sets spell automaticly for *.txt files
 augroup spelling
 	nnoremap <leader>ts :set spell!<cr>
@@ -61,7 +64,7 @@ augroup END
 augroup commenting
 	autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 augroup END
-
+" }}}
 augroup rust_stuff
 	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
 	autocmd FileType rust inoremap <buffer> iff if<space>{<left>
@@ -90,4 +93,10 @@ augroup END
 augroup email
 	onoremap in@ :<c-u>execute "normal! f@lvt."<cr>
 augroup end
-set laststatus=2
+
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
