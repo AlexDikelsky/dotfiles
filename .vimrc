@@ -11,8 +11,8 @@ augroup directions
 augroup END
 "Insert line above
 augroup insert_line
-	nnoremap <leader>O O<esc>j
-	nnoremap <leader>o o<esc>k
+	nnoremap [<space> O<esc>j
+	nnoremap ]<space> o<esc>k
 augroup END
 augroup rust_stuff
 	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
