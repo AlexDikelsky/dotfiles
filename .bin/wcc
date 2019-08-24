@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 'lines, words, bytes'
+wc $1

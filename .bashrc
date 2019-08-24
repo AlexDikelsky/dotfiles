@@ -115,7 +115,7 @@ fi
 alias rm='rm -I'
 alias v='vim'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/scripts
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin
 EDITOR=/usr/bin/vim
 
 
