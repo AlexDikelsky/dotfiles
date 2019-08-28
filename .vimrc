@@ -1,3 +1,4 @@
+syntax on
 let mapleader = ","
 let localmapleader = "\\"
 set relativenumber number
@@ -6,6 +7,9 @@ set hlsearch
 set incsearch
 set history=1000
 set nrformats-=octal
+
+set softtabstop=4
+set shiftwidth=4
 
 set foldmethod=indent
 setlocal foldmethod=marker
@@ -21,16 +25,12 @@ augroup END
 "Delete this after finished
 execute pathogen#infect()
 
-call plug#begin()
-	"Vimtex
-	Plug 'lervag/vimtex'
-call plug#end()
 " }}}
 "Running Programs {{{
 augroup running_programs
 	nnoremap <leader>chm :!chmod 755 %<cr>
 	nnoremap <leader>ex :w<cr>:!./%<cr>
-	"nnoremap <leader>so :w<cr>:source %<cr>
+	nnoremap <leader>so :w<cr>:source %<cr>
 augroup END
 "}}}
 "Tabs {{{
@@ -73,6 +73,7 @@ augroup directions
 
     noremap H ^
     noremap L $
+    nnoremap Y y$
 augroup END
 "}}}
 "Simple insertions {{{
