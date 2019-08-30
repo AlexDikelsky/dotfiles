@@ -1,3 +1,4 @@
+setlocal foldmethod=marker
 let mapleader = ","
 let localmapleader = "\\"
 set relativenumber number
@@ -9,6 +10,8 @@ set nrformats-=octal
 
 set foldmethod=indent
 setlocal foldmethod=marker
+
+nnoremap ,wc :w<cr><c-w>w:set ft=robo<cr><c-w>w
 
 " Shebangs {{{
 augroup shebangs
@@ -24,22 +27,22 @@ execute pathogen#infect()
 call plug#begin()
 	"Vimtex
 	Plug 'lervag/vimtex'
+	Plug 'AlexDikelsky/potion-plugin'
 call plug#end()
 " }}}
 "Running Programs {{{
 augroup running_programs
 	nnoremap <leader>chm :!chmod 755 %<cr>
 	nnoremap <leader>ex :w<cr>:!./%<cr>
-	"nnoremap <leader>so :w<cr>:source %<cr>
+	nnoremap <leader>so :w<cr>:source %<cr>
 augroup END
 "}}}
 "Tabs {{{
 augroup Tabs
-    "set shiftwidth=4
-    "set softtabstop=4
-    "set noexpandtab
+    set shiftwidth=4
+    set softtabstop=4
+    set noexpandtab
     "autocmd FileType haskell set tabstop=4
-    set expandtab
 augroup END
 " }}}
 "Searching for strings {{{
@@ -71,6 +74,7 @@ augroup directions
         nnoremap K <c-y>
     endif
 
+    noremap Y y$
     noremap H ^
     noremap L $
 augroup END

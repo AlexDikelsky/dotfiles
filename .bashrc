@@ -113,7 +113,7 @@ fi
 
 #Aliases I added
 alias rm='rm -I'
-alias v='vim'
+alias info='info --vi-keys'
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin
 EDITOR=/usr/bin/vim
@@ -122,3 +122,4 @@ EDITOR=/usr/bin/vim
 EULER_E=1.691030206757254
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
