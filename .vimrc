@@ -1,17 +1,31 @@
-setlocal foldmethod=marker
 let mapleader = ","
 let localmapleader = "\\"
+
 set relativenumber number
 highlight LineNr ctermfg=grey
+
 set hlsearch
 set incsearch
+
+filetype plugin indent on
+filetype plugin on
+
 set history=1000
 set nrformats-=octal
+set scrolloff=1
+set backspace=indent,eol,start
+set autoindent
 
-set foldmethod=indent
-setlocal foldmethod=marker
+set showcmd        "Shows the stuff you're typing in the bottom right
 
-nnoremap ,wc :w<cr><c-w>w:set ft=robo<cr><c-w>w
+set foldmethod=marker
+
+"Stuff I always forget {{{
+"   :help group
+"	for list of things to name stuff to get syntax highlighting to work
+"   :set list
+"	to change tabs to ^I s
+"}}}
 
 " Shebangs {{{
 augroup shebangs
@@ -35,6 +49,8 @@ augroup running_programs
 	nnoremap <leader>chm :!chmod 755 %<cr>
 	nnoremap <leader>ex :w<cr>:!./%<cr>
 	nnoremap <leader>so :w<cr>:source %<cr>
+	nnoremap <leader>tex :w<cr>:!latex %<cr>
+
 augroup END
 "}}}
 "Tabs {{{
@@ -48,7 +64,8 @@ augroup END
 "Searching for strings {{{
 augroup searching
 	"Starts searches automaticly with the Very Nomagic option
-	nnoremap / /\V
+	nnoremap / /\V\c
+	nnoremap ? /\V\c
 augroup END
 
 "Highlights training whitespace
@@ -68,11 +85,6 @@ augroup END
 "Simple motions {{{
 augroup directions
     "Remaps J to scroll down by a line and K to scroll up for a line for
-    "readonly files
-    if filewritable(expand("%")) ==# 0
-        nnoremap J <c-e>
-        nnoremap K <c-y>
-    endif
 
     noremap Y y$
     noremap H ^
@@ -81,6 +93,11 @@ augroup END
 "}}}
 "Simple insertions {{{
 "Insert line above
+augroup tilde
+    autocmd FileType plaintex inoremap <c-@> ~
+    "For some reason <c-<space>> doesnt work directly, but you can do <c-@> to
+    "make it work anyway
+augroup END
 augroup insert_line
 	nnoremap [<space> O<esc>j
 	nnoremap ]<space> o<esc>k
@@ -93,8 +110,10 @@ augroup rust_stuff
 	autocmd FileType rust inoremap <buffer> if<space> TRY_AGAIN_WITH_iff
 augroup END
 "}}}
-"Easier way to <esc> {{{
-augroup escapeing
+"Remove some keystrokes {{{
+augroup important
+	nnoremap ; :
+	nnoremap : <nop>
 	inoremap jk <esc>
 	inoremap <esc> <nop>
 augroup END
