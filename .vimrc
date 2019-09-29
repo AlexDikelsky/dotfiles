@@ -35,13 +35,12 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
-"Delete this after finished
 execute pathogen#infect()
 
 call plug#begin()
 	"Vimtex
-	Plug 'lervag/vimtex'
-	Plug 'AlexDikelsky/potion-plugin'
+	Plug 'lervag/vimtex'   "great syntax highliting
+	Plug 'tommcdo/vim-lion'  "better indentation stuff
 call plug#end()
 " }}}
 "Running Programs {{{
@@ -65,13 +64,13 @@ augroup END
 augroup searching
 	"Starts searches automaticly with the Very Nomagic option
 	nnoremap / /\V\c
-	nnoremap ? /\V\c
+	nnoremap ? ?\V\c
 augroup END
 
 "Highlights training whitespace
 augroup highlighting
 	"Unhighlight everything
-	nnoremap <leader>H :nohlsearch<cr>
+	nnoremap <c-l> :nohlsearch<cr>
 augroup END
 "}}}
 "Editing vimrc from anywhere {{{
@@ -103,12 +102,21 @@ augroup insert_line
 	nnoremap ]<space> o<esc>k
 augroup END
 "}}}
-"Autocompletion for rust {{{
-augroup rust_stuff
-	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
-	autocmd FileType rust inoremap <buffer> iff if<space>{<left>
-	autocmd FileType rust inoremap <buffer> if<space> TRY_AGAIN_WITH_iff
+"Autocompletion {{{
+augroup stuff
+   inoreab proba probability
+   inoreab possi possibility
+   inoreab posss possibilities
+   inoreab sams sample space
+   inoreab diffe different
+   "Latex
+   inoreab begit \begin{itemize}<cr>\end{itemize}<esc>O\item[]
 augroup END
+"augroup rust_stuff
+"	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
+"	autocmd FileType rust inoremap <buffer> iff if<space>{<left>
+"	autocmd FileType rust inoremap <buffer> if<space> TRY_AGAIN_WITH_iff
+"augroup END
 "}}}
 "Remove some keystrokes {{{
 augroup important
