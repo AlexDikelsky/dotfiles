@@ -21,4 +21,4 @@ git checkout master
 
 git merge master dirty
 
-git push oriin --delete dirty
+git push origin --delete dirty
