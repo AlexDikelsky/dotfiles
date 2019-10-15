@@ -114,12 +114,16 @@ fi
 #Aliases I added
 alias rm='rm -I'
 alias info='info --vi-keys'
+alias sl='sl -e'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin
-EDITOR=/usr/bin/vim
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin:/home/dikeal01/.local/bin
 
+export EDITOR="vim"
 
 EULER_E=1.691030206757254
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#Not sure why this doesn't work in my .profile, but this remaps ctrl-l to also ls after clearing the screen
+bind -x '"\C-l": clear; ls'
 
