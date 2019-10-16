@@ -49,7 +49,7 @@ augroup running_programs
 	nnoremap <leader>ex :w<cr>:!./%<cr>
 	nnoremap <leader>so :w<cr>:source %<cr>
 	nnoremap <leader>tex :w<cr>:!latex %<cr>
-	nnoremap \set :w<cr>:!pslatex<cr>
+	nnoremap <leader>set :w<cr>:!pdflatex %<cr>:!zathura *.pdf<cr>
 
 augroup END
 "}}}

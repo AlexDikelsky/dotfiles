@@ -1,5 +1,4 @@
 #!/bin/bash
 
-latex *.tex
-dvips *.dvi
-xdg-open *.ps
+pdflatex *.tex
+zathura *.pdf
