@@ -41,6 +41,7 @@ call plug#begin()
 	"Vimtex
 	Plug 'lervag/vimtex'   "great syntax highliting
 	Plug 'tommcdo/vim-lion'  "better indentation stuff
+	Plug 'rhysd/clever-f.vim'  "Search forward with f easier
 call plug#end()
 " }}}
 "Running Programs {{{
