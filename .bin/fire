@@ -1,9 +1,26 @@
-#!/bin/zsh
+#!/usr/bin/env python3
 
-marks="
+import sys
+import subprocess
 
-echo "Type
+commands = dict()
 
-read varname
+commands["github"] = "https://github.com"
+commands["katie"] = "https://katie.luther.edu"
+commands["chem"] = "https://app.101edu.co/"
+commands["mygit"] = "https://github.com/alexdikelsky"
+commands["stack"] = "stackoverflow.com"
+commands["search"] = "https://www.ecosia.org/?c=en"
 
-echo $varname
+def run(n=""):
+    if n in commands:
+        return commands[n]
+    else:
+        return ""
+
+print(len(sys.argv))
+if len(sys.argv) < 2:
+    subprocess.call("firefox", shell=True)
+else:
+    site_name = (run(sys.argv[1]))
+    subprocess.call("firefox " + site_name, shell=True)
