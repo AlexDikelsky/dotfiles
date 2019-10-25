@@ -1,8 +1,7 @@
 let mapleader = ","
 let localmapleader = "\\"
 
-set relativenumber number
-highlight LineNr ctermfg=grey
+"No line numbers because screen is small
 
 set hlsearch
 set incsearch
@@ -35,11 +34,20 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
-execute pathogen#infect()
 
 call plug#begin()
 	"Vimtex
-	Plug 'lervag/vimtex'   "great syntax highliting
+"    	Plug 'lervag/vimtex'   "great syntax highliting
+"
+"	"Turns off annoying braces when trying to do c-v stuff
+"  let g:vimtex_indent_enabled=0
+"  let g:vimtex_indent_bib_enabled=0
+"  let g:vimtex_indent_delims=0
+"  let g:vimtex_indent_ignored_envs=0
+"  let g:vimtex_indent_lists=0
+"  let g:vimtex_indent_on_ampersands=0
+
+
 	Plug 'tommcdo/vim-lion'  "better indentation stuff
 	Plug 'rhysd/clever-f.vim'  "Search forward with f easier
 call plug#end()

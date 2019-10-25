@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+marks="
+
+echo "Type
+
+read varname
+
+echo $varname
