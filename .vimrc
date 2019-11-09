@@ -36,18 +36,7 @@ augroup END
 "Plugins: {{{
 
 call plug#begin()
-	"Vimtex
-"    	Plug 'lervag/vimtex'   "great syntax highliting
-"
-"	"Turns off annoying braces when trying to do c-v stuff
-"  let g:vimtex_indent_enabled=0
-"  let g:vimtex_indent_bib_enabled=0
-"  let g:vimtex_indent_delims=0
-"  let g:vimtex_indent_ignored_envs=0
-"  let g:vimtex_indent_lists=0
-"  let g:vimtex_indent_on_ampersands=0
-
-
+	"Decided to remove vimtex
 	Plug 'tommcdo/vim-lion'  "better indentation stuff
 	Plug 'rhysd/clever-f.vim'  "Search forward with f easier
 call plug#end()
@@ -67,6 +56,8 @@ augroup Tabs
     set shiftwidth=4
     set softtabstop=4
     set noexpandtab
+    autocmd FileType awk set tabstop=8
+    autocmd FileType awk set shiftwidth=8
     "autocmd FileType haskell set tabstop=4
 augroup END
 " }}}
@@ -113,14 +104,26 @@ augroup insert_line
 augroup END
 "}}}
 "Autocompletion {{{
-augroup stuff
+augroup abbreviations
    inoreab proba probability
    inoreab possi possibility
    inoreab posss possibilities
    inoreab sams sample space
    inoreab diffe different
+   inoreab siz six
    "Latex
    inoreab begit \begin{itemize}<cr>\end{itemize}<esc>O\item[]
+
+   "For spreadsheet
+   "inoreab 0 vim
+   "inoreab 1 neovim
+   "inoreab 2 emacs
+
+   "These are a smidge hackey because its hard to actually write <c-a> without
+   "it getting interprated
+   "inoreab ca < c-a ><esc>hxhhhhxA 
+   "inoreab cb < c-b ><esc>hxhhhhxA
+
 augroup END
 "augroup rust_stuff
 "	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
@@ -149,4 +152,10 @@ set statusline+=\ \ \ \ \ \ \ \ \ \ \ \ \ \    "Whitespace
 set statusline+=%p                             "How far the cursor is down the file in %
 set statusline+=%%                             "`backslashed` percent sign
 set statusline+=\ \t\o\t\a\l\ \l\i\n\e\s\:\ %L   "Total lines in the file
+"}}}
+"Stop making tmux relatex mistakes {{{
+augroup tmux_stuff
+    nnoremap <c-w>o <c-w>w
+    nnoremap <c-w>O <c-w>o
+augroup END
 "}}}
