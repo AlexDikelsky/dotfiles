@@ -46,12 +46,17 @@ augroup running_programs
 	nnoremap <leader>chm :!chmod 755 %<cr>
 	nnoremap <leader>ex :w<cr>:!./%<cr>
 	nnoremap <leader>so :w<cr>:source %<cr>
-	nnoremap <leader>tex :w<cr>:!latex %<cr>
 	nnoremap <leader>set :w<cr>:!pdflatex %<cr>:!zathura *.pdf<cr>
+	"P because plaintex
+	nnoremap <leader>pset :w<cr>:!pdftex %<cr>:!zathura *.pdf<cr>
+
+	"Execute line as bc
+	"The <del> at the end removes the new line.
+	nnoremap <leader>bc :!echo 'scale=20;<c-r>"<del>' \| bc
 
 augroup END
 "}}}
-"Tabs {{{
+"Tab Size {{{
 augroup Tabs
     set shiftwidth=4
     set softtabstop=4
@@ -131,12 +136,14 @@ augroup END
 "	autocmd FileType rust inoremap <buffer> if<space> TRY_AGAIN_WITH_iff
 "augroup END
 "}}}
-"Remove some keystrokes {{{
+"Large keymap changes {{{
 augroup important
 	nnoremap ; :
 	nnoremap : <nop>
 	inoremap jk <esc>
+	inoremap jz <c-o>zz
 	inoremap <esc> <nop>
+	inoremap  <esc>
 augroup END
 "}}}
 "Prepare a file for posting {{{
@@ -153,7 +160,7 @@ set statusline+=%p                             "How far the cursor is down the f
 set statusline+=%%                             "`backslashed` percent sign
 set statusline+=\ \t\o\t\a\l\ \l\i\n\e\s\:\ %L   "Total lines in the file
 "}}}
-"Stop making tmux relatex mistakes {{{
+"Stop making tmux mistakes {{{
 augroup tmux_stuff
     nnoremap <c-w>o <c-w>w
     nnoremap <c-w>O <c-w>o
