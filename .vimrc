@@ -166,3 +166,72 @@ augroup tmux_stuff
     nnoremap <c-w>O <c-w>o
 augroup END
 "}}}
+"Greek characters with the alt key {{{
+augroup greek_chars
+    "You can also get these with diagrapsh
+    inoremap a α
+    inoremap b β
+    inoremap g γ
+    inoremap d δ
+    inoremap e ε
+    inoremap z ζ
+    inoremap h η
+    inoremap t θ
+    inoremap i ι
+    inoremap k κ
+    inoremap l λ
+    inoremap m μ
+    inoremap n ν
+    inoremap x ξ
+    "Omicron is bound to a weird letter
+    inoremap y ο
+    inoremap p π
+    inoremap r ρ
+    inoremap s σ
+    "Tau is bound to a weird letter
+    inoremap q τ
+    inoremap u υ
+    inoremap j φ
+    "Phi is bound to a weird letter
+    inoremap c χ
+    "Psi is bound to a weird letter
+    inoremap w ψ
+    inoremap o ω
+
+    inoremap A Α
+    inoremap B Β
+    inoremap G Γ
+    inoremap D Δ
+    inoremap E Ε
+    inoremap Z Ζ
+    inoremap H Η
+    inoremap T Θ
+    inoremap I Ι
+    inoremap K Κ
+    inoremap L Λ
+    inoremap M Μ
+    inoremap N Ν
+    inoremap X Ξ
+    "Omicron is bound to a weird letter
+    inoremap Y Ο
+    inoremap P Π
+    inoremap R Ρ
+    inoremap S Σ
+    "Tau is bound to a weird letter
+    inoremap Q Τ
+    inoremap U Υ
+    inoremap J Φ
+    "Phi is bound to a weird letter
+    inoremap C Χ
+    "Psi is bound to a weird letter
+    inoremap W Ψ
+    inoremap O Ω
+
+    "abcdefghijklmnopqrstuvwxyz
+    "αβχδεfγηιφκλμνωπτρσθυvψξοζ
+
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    "ΑΒΧΔΕFΓΗΙΦΚΛΜΝΩΠΤΡΣΘΥVΨΞΟΖ
+
+augroup END
+"}}}
