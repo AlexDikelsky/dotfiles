@@ -41,6 +41,8 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias sl="sl -e"
 alias e="vim"
+alias emacs="emacs -mm"  #Maximize emacs automaticly
+alias bc="bc -l -q"
 
 bindkey '^L' "clear^Mls^M"
 

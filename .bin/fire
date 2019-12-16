@@ -11,6 +11,13 @@ commands["chem"] = "https://app.101edu.co/"
 commands["mygit"] = "https://github.com/alexdikelsky"
 commands["stack"] = "stackoverflow.com"
 commands["search"] = "https://www.ecosia.org/?c=en"
+commands["crates"] = "crates.io"
+commands["ctan"] = "https://ctan.org/pkg?lang=en"
+commands["desmos"] = "https://www.desmos.com/calculator"
+commands["period"] = "https://en.wikipedia.org/wiki/Periodic_table#Overview"
+commands["luther"] = "https://www.luther.edu"
+commands["cal"] = "https://www.luther.edu/registrar/calendar/"
+
 
 def run(n=""):
     if n in commands:
@@ -18,7 +25,6 @@ def run(n=""):
     else:
         return ""
 
-print(len(sys.argv))
 if len(sys.argv) < 2:
     subprocess.call("firefox", shell=True)
 else:

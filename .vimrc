@@ -52,7 +52,7 @@ augroup running_programs
 
 	"Execute line as bc
 	"The <del> at the end removes the new line.
-	nnoremap <leader>bc :!echo 'scale=20;<c-r>"<del>' \| bc
+	nnoremap <leader>bc :!echo 'scale=10;<c-r>"<del>' \| bc
 
 augroup END
 "}}}
@@ -99,9 +99,11 @@ augroup END
 "Simple insertions {{{
 "Insert line above
 augroup tilde
-    autocmd FileType plaintex inoremap <c-@> ~
+    "autocmd FileType plaintex inoremap <c-@> ~
     "For some reason <c-<space>> doesnt work directly, but you can do <c-@> to
     "make it work anyway
+    "Alphabet
+    inoremap jalph abcdefghijklmnopqrstuvwxyz
 augroup END
 augroup insert_line
 	nnoremap [<space> O<esc>j
@@ -115,8 +117,10 @@ augroup abbreviations
    inoreab posss possibilities
    inoreab sams sample space
    inoreab diffe different
+   inoreab equili equilibrium
    inoreab siz six
    "Latex
+   inoreab latst \documentclass{article}<cr>\begin{document}<cr>\end{document}<esc><up>o
    inoreab begit \begin{itemize}<cr>\end{itemize}<esc>O\item[]
 
    "For spreadsheet
@@ -141,7 +145,7 @@ augroup important
 	nnoremap ; :
 	nnoremap : <nop>
 	inoremap jk <esc>
-	inoremap jz <c-o>zz
+	inoremap ja <esc>A
 	inoremap <esc> <nop>
 	inoremap  <esc>
 augroup END
@@ -166,7 +170,70 @@ augroup tmux_stuff
     nnoremap <c-w>O <c-w>o
 augroup END
 "}}}
-"Greek characters with the alt key {{{
+"Special Characters {{{
+"Superscript and subscript letters
+"Credit to https://bitbucket.org/atimholt/dot_files/src/default/vimrc 
+"for the superscript chars
+
+:digraph aS 7491
+:digraph bS 7495
+:digraph cS 7580
+:digraph dS 7496
+:digraph eS 7497
+:digraph fS 7584
+:digraph gS 7501
+:digraph hS 688
+:digraph iS 8305
+:digraph jS 690
+:digraph kS 7503
+:digraph lS 737
+:digraph mS 7504
+:digraph nS 8319
+:digraph oS 7506
+:digraph pS 7510
+" No superscript “q” in unicode
+" :digraph qS
+:digraph rS 691
+:digraph sS 738
+:digraph tS 7511
+:digraph uS 7512
+:digraph vS 7515
+:digraph wS 695
+:digraph xS 739
+:digraph yS 696
+:digraph zS 7611
+
+"Subscripts
+:digraph as 8336
+"Not found
+":digraph bs 
+"Not found
+":digraph cs 
+":digraph ds
+:digraph es 8337
+":digraph fs 
+":digraph gs 
+:digraph hs 8341
+:digraph is 7522
+:digraph js 11388
+:digraph ks 8342
+:digraph ls 8343
+:digraph ms 8344
+:digraph ns 8345
+:digraph os 8338
+:digraph ps 8346
+" :digraph sq
+:digraph rs 7523
+:digraph ss 8347
+:digraph ts 8348
+:digraph us 7524
+:digraph vs 7525
+":digraph ws 
+:digraph xs 8339
+":digraph ys 
+":digraph zs
+
+
 augroup greek_chars
     "You can also get these with diagrapsh
     inoremap a α
