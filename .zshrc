@@ -40,11 +40,18 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias sl="sl -e"
+alias e="vim"
+alias emacs="emacs -mm"  #Maximize emacs automaticly
+alias bc="bc -l -q"
 
-function clear-ls() {
-    clear
-    ls
-    zle && zle .reset-prompt && zle -R
-}
-zle -N clear-ls
-bindkey '^L' clear-ls
+bindkey '^L' "clear^Mls^M"
+
+#function clear-ls() {
+#    clear
+#    ls
+#    #zle && zle .reset-prompt && zle -R
+#}
+#zle -N clear-ls
+bindkey -s "^L" "clear^Mls^M"
+#bindkey -s '[20~' "That was a P! Nice job!"
+
