@@ -34,12 +34,12 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
+    packadd vim-lion
+    packadd clever-f.vim
+    packadd bccalc.vim
 
-call plug#begin()
-	"Decided to remove vimtex
-	Plug 'tommcdo/vim-lion'  "better indentation stuff
-	Plug 'rhysd/clever-f.vim'  "Search forward with f easier
-call plug#end()
+	"Plug 'tommcdo/vim-lion'  "better indentation stuff
+	"Plug 'rhysd/clever-f.vim'  "Search forward with f easier
 " }}}
 "Running Programs {{{
 augroup running_programs
@@ -50,9 +50,12 @@ augroup running_programs
 	"P because plaintex
 	nnoremap <leader>pset :w<cr>:!pdftex %<cr>:!zathura *.pdf<cr>
 
+	"R Script
+	nnoremap <leader>rs :w<cr>:R --slave < %<cr>
+
 	"Execute line as bc
 	"The <del> at the end removes the new line.
-	nnoremap <leader>bc :!echo 'scale=10;<c-r>"<del>' \| bc
+	"nnoremap <leader>bc :!echo 'scale=10;<c-r>"<del>' \| bc
 
 augroup END
 "}}}
@@ -134,18 +137,13 @@ augroup abbreviations
    "inoreab cb < c-b ><esc>hxhhhhxA
 
 augroup END
-"augroup rust_stuff
-"	autocmd FileType rust nnoremap <buffer> <localleader>c I//<esc>
-"	autocmd FileType rust inoremap <buffer> iff if<space>{<left>
-"	autocmd FileType rust inoremap <buffer> if<space> TRY_AGAIN_WITH_iff
-"augroup END
-"}}}
 "Large keymap changes {{{
 augroup important
 	nnoremap ; :
 	nnoremap : <nop>
 	inoremap jk <esc>
 	inoremap ja <esc>A
+	inoremap jz <c-o>zz
 	inoremap <esc> <nop>
 	inoremap  <esc>
 augroup END
