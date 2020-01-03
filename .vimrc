@@ -35,13 +35,9 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
-    "packadd vim-lion
-    "packadd clever-f.vim
-    "packadd bccalc.vim
-    packadd a-test-to-attest-to
-
-	"Plug 'tommcdo/vim-lion'  "better indentation stuff
-	"Plug 'rhysd/clever-f.vim'  "Search forward with f easier
+    packadd vim-lion
+    packadd clever-f.vim
+    packadd bccalc.vim
 " }}}
 "Running Programs {{{
 augroup running_programs
