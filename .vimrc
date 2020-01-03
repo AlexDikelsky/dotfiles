@@ -35,9 +35,14 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
-    packadd vim-lion
-    packadd clever-f.vim
-    packadd bccalc.vim
+"    packadd vim-lion
+"    packadd clever-f.vim
+"    packadd bccalc.vim
+     packadd a-test-to-attest-to
+     set completefunc= attest#CompleteSimple 
+
+     
+
 
 	"Plug 'tommcdo/vim-lion'  "better indentation stuff
 	"Plug 'rhysd/clever-f.vim'  "Search forward with f easier
@@ -121,6 +126,7 @@ augroup abbreviations
    inoreab diffe different
    inoreab equili equilibrium
    inoreab jalph abcdefghijklmnopqrstuvwxyz
+map <c-s> aabcde
    inoreab siz six
    "Latex
    inoreab latst \documentclass{article}<cr>\begin{document}<cr>\end{document}<esc><up>o
@@ -174,5 +180,5 @@ augroup END
 "Credit to https://bitbucket.org/atimholt/dot_files/src/default/vimrc 
 "for the superscript chars
 "
-source /home/alex/.vim/pack/AlexDikelsky/start/special_chars.vim
+"source /home/alex/.vim/pack/AlexDikelsky/start/special_chars.vim
 "}}}
