@@ -35,17 +35,9 @@ augroup shebangs
 augroup END
 " }}}
 "Plugins: {{{
-"    packadd vim-lion
-"    packadd clever-f.vim
-"    packadd bccalc.vim
-     packadd a-test-to-attest-to
-     set completefunc= attest#CompleteSimple 
-
-     
-
-
-	"Plug 'tommcdo/vim-lion'  "better indentation stuff
-	"Plug 'rhysd/clever-f.vim'  "Search forward with f easier
+    packadd vim-lion
+    packadd clever-f.vim
+    packadd bccalc.vim
 " }}}
 "Running Programs {{{
 augroup running_programs
@@ -119,15 +111,20 @@ augroup END
 "}}}
 "Autocompletion {{{
 augroup abbreviations
+    "General
+   inoreab jalph abcdefghijklmnopqrstuvwxyz
+   inoreab siz six
+    "Math
    inoreab proba probability
    inoreab possi possibility
    inoreab posss possibilities
    inoreab sams sample space
    inoreab diffe different
+    "Chem
    inoreab equili equilibrium
-   inoreab jalph abcdefghijklmnopqrstuvwxyz
-map <c-s> aabcde
-   inoreab siz six
+    "Myth
+   inoreab ica Icarus
+   inoreab daed Daedalus
    "Latex
    inoreab latst \documentclass{article}<cr>\begin{document}<cr>\end{document}<esc><up>o
    inoreab begit \begin{itemize}<cr>\end{itemize}<esc>O\item[]
@@ -180,5 +177,5 @@ augroup END
 "Credit to https://bitbucket.org/atimholt/dot_files/src/default/vimrc 
 "for the superscript chars
 "
-"source /home/alex/.vim/pack/AlexDikelsky/start/special_chars.vim
+source /home/alex/.vim/pack/AlexDikelsky/start/special_chars.vim
 "}}}

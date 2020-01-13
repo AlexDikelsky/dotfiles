@@ -1,4 +1,4 @@
-augroup special_chars
+augroup super_and_subscripts
 
     digraph aS 7491
     digraph bS 7495
@@ -60,6 +60,9 @@ augroup special_chars
     
     
     "You can also get these with diagrapsh
+    "
+augroup END
+augroup greek_letters
     inoremap a α
     inoremap b β
     inoremap g γ
@@ -123,5 +126,9 @@ augroup special_chars
     
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ
     "ΑΒΧΔΕFΓΗΙΦΚΛΜΝΩΠΤΡΣΘΥVΨΞΟΖ
-
 augroup END
+
+augroup english_chars
+
+    digraph en –
+    digraph em —
