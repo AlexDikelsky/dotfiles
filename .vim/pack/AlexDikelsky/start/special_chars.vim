@@ -62,6 +62,7 @@ augroup super_and_subscripts
     "You can also get these with diagrapsh
     "
 augroup END
+
 augroup greek_letters
     inoremap a α
     inoremap b β
@@ -130,5 +131,6 @@ augroup END
 
 augroup english_chars
 
-    digraph en –
-    digraph em —
+    digraph en 8211
+    digraph em 8212
+augroup END
