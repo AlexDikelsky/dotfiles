@@ -161,10 +161,9 @@ augroup END
 set laststatus=2
 set statusline=%m                              "Modifiable or not
 set statusline+=\ %F                           "Full path to file
-set statusline+=\ \ \ \ \ \ \ \ \ \ \ \ \ \    "Whitespace
-set statusline+=%p                             "How far the cursor is down the file in %
-set statusline+=%%                             "`backslashed` percent sign
-set statusline+=\ \t\o\t\a\l\ \l\i\n\e\s\:\ %L   "Total lines in the file
+set statusline+=\ (%c,  "Column number
+set statusline+=\ %l)   " line number
+set statusline+=\ \l\i\n\e\s\:\ %L   "Total lines in the file
 "}}}
 "Stop making tmux mistakes {{{
 augroup tmux_stuff
