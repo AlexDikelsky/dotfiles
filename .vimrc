@@ -146,8 +146,9 @@ augroup important
 	nnoremap ; :
 	nnoremap : <nop>
 	inoremap jk <esc>
-	inoremap jA <esc>A
+	inoremap jl <esc>A
 	inoremap jz <c-o>zz
+	inoremap <c-e> <esc>A
 	"inoremap <esc> <nop>
 	inoremap  <esc>
 augroup END
@@ -160,7 +161,7 @@ augroup END
 "Statusline stuff {{{
 set laststatus=2
 set statusline=%m                              "Modifiable or not
-set statusline+=\ %F                           "Full path to file
+set statusline+=\ %f                           "relative pat
 set statusline+=\ (%c,  "Column number
 set statusline+=\ %l)   " line number
 set statusline+=\ \l\i\n\e\s\:\ %L   "Total lines in the file
