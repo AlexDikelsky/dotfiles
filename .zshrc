@@ -44,7 +44,7 @@ alias e="vim"
 alias emacs="emacs -mm"  #Maximize emacs automaticly
 alias bc="bc -l -q"
 
-bindkey '^L' "clear^Mls^M"
+#bindkey '^L' "clear^Mls^M"
 
 #function clear-ls() {
 #    clear
@@ -55,3 +55,4 @@ bindkey '^L' "clear^Mls^M"
 bindkey -s "^L" "clear^Mls^M"
 #bindkey -s '[20~' "That was a P! Nice job!"
 
+export GOPATH=$HOME/go

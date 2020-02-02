@@ -129,8 +129,30 @@ augroup greek_letters
     "ΑΒΧΔΕFΓΗΙΦΚΛΜΝΩΠΤΡΣΘΥVΨΞΟΖ
 augroup END
 
-augroup english_chars
+augroup useful_special_chars
 
+    "Dashes
     digraph en 8211
     digraph em 8212
+
+    "Not equal
+    digraph ne 8800
+
+    "ℝ  (set of real numbers)
+    digraph rn 8477
+
+    "ℕ  (Set of natural numbers)
+    digraph nn 8469
+
+    "ℤ  (Set of integers)
+    digraph in 8484
+
+    "ℚ  (Set of rational numbers)
+    digraph qn 8474
+
+    "ℂ  (Set of Complex numbers)
+    digraph cn 8450
+
+    digraph fa 8704
+    
 augroup END

@@ -49,7 +49,8 @@ augroup running_programs
 	nnoremap <leader>pset :w<cr>:!pdftex %<cr>:!zathura *.pdf<cr>
 
 	"R Script
-	nnoremap <leader>rs :w<cr>:R --slave < %<cr>
+	nnoremap <leader>rs :w<cr>:!R --slave < %<cr>
+	nnoremap <leader>def "zyaW:!sdcv <c-r>z<cr>
 
 	"Execute line as bc
 	"The <del> at the end removes the new line.
