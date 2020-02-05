@@ -153,6 +153,11 @@ augroup useful_special_chars
     "ℂ  (Set of Complex numbers)
     digraph cn 8450
 
+    "𝕀  (using this as unity)
+    digraph un 120128
+
+    "for all
     digraph fa 8704
+
     
 augroup END

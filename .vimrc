@@ -173,6 +173,21 @@ augroup tmux_stuff
     nnoremap <c-w>O <c-w>o
 augroup END
 "}}}
+"Macros {{{
+augroup Macros    
+
+"mz                      "create a mark here
+"?\(\d\+\.\)\+\d\+<cr>   "Search for stuff like 4.3, 1.2.3.4, ..., but not stuff without a decimal like 3
+""zyiW			"Yank that WORD
+"'z                      "Go back to previous mark
+""zp		        "Paste the word from earlier
+"a.1			"Append .1 to the end
+"<c-a>			"inc the value
+
+    nnoremap ss mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zpa.1
+    nnoremap sn mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zp<c-a>
+augroup END
+"}}}
 "Special Characters {{{
 "Superscript and subscript letters
 "Credit to https://bitbucket.org/atimholt/dot_files/src/default/vimrc 
