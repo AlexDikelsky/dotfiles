@@ -184,8 +184,8 @@ augroup Macros
 "a.1			"Append .1 to the end
 "<c-a>			"inc the value
 
-    nnoremap ss mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zpa.1
-    nnoremap sn mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zp<c-a>
+    inoreab ss <esc>mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zpa.1a
+    inoreab sn <esc>mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zp<c-a>a
 augroup END
 "}}}
 "Special Characters {{{
