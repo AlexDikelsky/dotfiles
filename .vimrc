@@ -5,6 +5,7 @@ let localmapleader = "\\"
 
 set hlsearch
 set incsearch
+set dictionary=/usr/share/dict/american-english
 syntax on
 
 filetype plugin indent on
@@ -32,6 +33,7 @@ augroup shebangs
     inoreabbrev py #!/usr/bin/env python3
     inoreabbrev po #!/usr/bin/potion
     inoreabbrev ba #!/bin/bash
+    inoreabbrev psvm public static void main(String[] args) {
 augroup END
 " }}}
 "Plugins: {{{
@@ -126,6 +128,13 @@ augroup abbreviations
     "Myth
    inoreab ica Icarus
    inoreab daed Daedalus
+
+   "Geology
+   inoreab sedi sediment
+   inoreab sedy sedimentary
+   inoreab Sedi Sediment
+   inoreab ign  igneous
+
    "Latex
    inoreab latst \documentclass{article}<cr>\begin{document}<cr>\end{document}<esc><up>o
    inoreab begit \begin{itemize}<cr>\end{itemize}<esc>O\item[]
@@ -152,6 +161,7 @@ augroup important
 	inoremap <c-e> <esc>A
 	"inoremap <esc> <nop>
 	inoremap  <esc>
+	inoremap js <esc>mz[sz=1<cr>`za
 augroup END
 "}}}
 "Prepare a file for posting {{{
@@ -184,7 +194,9 @@ augroup Macros
 "a.1			"Append .1 to the end
 "<c-a>			"inc the value
 
-    inoreab ss <esc>mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zpa.1a
+    inoreab ss <esc>mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zpa.1
+
+    "This doesn't work as intended, need to look at delimiters soon
     inoreab sn <esc>mz?\(\d\+\.\)\+\d\+<cr>"zyiW'z"zp<c-a>a
 augroup END
 "}}}
