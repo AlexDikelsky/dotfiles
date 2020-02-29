@@ -156,7 +156,8 @@ augroup important
 	nnoremap ; :
 	nnoremap : <nop>
 	inoremap jk <esc>
-	inoremap jl <esc>A
+	inoremap jl <c-o>A
+	inoremap ji <c-o>I
 	inoremap jz <c-o>zz
 	inoremap <c-e> <esc>A
 	"inoremap <esc> <nop>
