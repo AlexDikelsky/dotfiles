@@ -43,6 +43,7 @@ alias sl="sl -e"
 alias e="vim"
 alias emacs="emacs -mm"  #Maximize emacs automaticly
 alias bc="bc -l -q"
+alias j="ijconsole"
 
 #bindkey '^L' "clear^Mls^M"
 

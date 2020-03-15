@@ -38,7 +38,6 @@ augroup END
 " }}}
 "Plugins: {{{
     packadd vim-lion
-    packadd clever-f.vim
     packadd bccalc.vim
 " }}}
 "Running Programs {{{
