@@ -1,4 +1,3 @@
-package Question1;
 
 public class salariedEmployee extends Employee {
 
@@ -6,12 +5,12 @@ public class salariedEmployee extends Employee {
 	
 	public salariedEmployee( String name, int id, String ssn, String address, int age, String departmentWorkIn,
 			String responsibilities, double salary, double workHours) {
-		super(name, id, ssn, address, age, departmentWorkIn, responsibilities, salary, workHours)
+		super(name, id, ssn, address, age, departmentWorkIn, responsibilities, salary);
 		this.workHours = workHours;
 	}
 	
 	public double totalSalary() {
-		return this.workHours * 10.0 + this.salary;
+		return this.workHours * 10.0 + super.getSal();
 	}
 		
 		

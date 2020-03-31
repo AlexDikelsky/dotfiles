@@ -1,4 +1,3 @@
-package Question1;
 
 public class Employee {
 	private double baseSalary;
@@ -11,6 +10,8 @@ public class Employee {
 	private String departmentWorkIn;
 	private String responsibilities;
 	private final double salary;
+
+	public double getSal() { return salary; }
 	
 
 	public Employee(String name, int id, String ssn, String address, int age, String departmentWorkIn,
