@@ -45,7 +45,8 @@ augroup running_programs
 	nnoremap <leader>chm :!chmod 755 %<cr>
 	nnoremap <leader>ex :w<cr>:!./%<cr>
 	nnoremap <leader>so :w<cr>:source %<cr>
-	nnoremap <leader>set :w<cr>:!pdflatex %<cr>:!zathura *.pdf<cr>
+	" Can't figure out how to install zathura right now
+	nnoremap <leader>set :w<cr>:!pdflatex %<cr>:!xdg-open *.pdf<cr>
 	"P because plaintex
 	nnoremap <leader>pset :w<cr>:!pdftex %<cr>:!zathura *.pdf<cr>
 
@@ -109,6 +110,9 @@ augroup END
 augroup insert_line
 	nnoremap [<space> O<esc>j
 	nnoremap ]<space> o<esc>k
+
+	" For a class
+vnoremap weird : s/.*(\(\w\+\)\s\+"\(.\?\)"\s\+(\(.*\))\s\+\(\w*\)\s\+(\(.*\))).*/\1 -> \4 [label = "\2\/\3\/\5"]<cr>gv:s/"\//"λ\/<cr> gv:s/\/"/\/λ<cr>gv:s/\/\//\/λ\/<cr>
 augroup END
 "}}}
 "Autocompletion {{{
@@ -127,6 +131,9 @@ augroup abbreviations
     "Myth
    inoreab ica Icarus
    inoreab daed Daedalus
+
+   " Jazz
+   inoreab mfv My Funny Valentine
 
    "Geology
    inoreab sedi sediment
@@ -205,5 +212,5 @@ augroup END
 "Credit to https://bitbucket.org/atimholt/dot_files/src/default/vimrc 
 "for the superscript chars
 "
-source /home/alex/.vim/pack/AlexDikelsky/start/special_chars.vim
+source $HOME/.vim/pack/AlexDikelsky/start/special_chars.vim
 "}}}

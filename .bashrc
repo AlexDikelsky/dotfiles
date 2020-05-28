@@ -114,7 +114,7 @@ fi
 #Aliases I added
 alias rm='rm -I'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin:/home/dikeal01/.local/bin
+#PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin:/home/dikeal01/.local/bin
 
 export EDITOR="vim"
 
@@ -137,6 +137,9 @@ PATH+="$HOME/.bin:"
 PATH+="$HOME/eclipse/java-2020-03/eclipse:"
 PATH+="$HOME/.bin:"
 PATH+="$HOME/j901:"
+PATH+="/awips2/python/bin:"
+PATH+="$HOME/jython2.7.2/bin:"
+PATH+="$HOME/gforth-0.7.3/"
 
 
 
