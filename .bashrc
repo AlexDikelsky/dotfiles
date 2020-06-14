@@ -142,6 +142,11 @@ PATH+="$HOME/jython2.7.2/bin:"
 PATH+="$HOME/gforth-0.7.3/"
 
 
+CLASSPATH="/usr/local/lib/antlr-4.8.1-complete.jar:/usr/local/lib/antlr-4.7.1-complete.jar$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.8.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias idk='java -jar /usr/local/lib/antlr-4.8-complete.jar'
+alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.8.1-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+alias grunn='java org.antlr.v4.gui.TestRig'
 
 #export PATH="/bin:/home/alex/.bin:/home/alex/.cargo/bin:/sbin:/snap/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/alex/.local/bin/home/alex/.local/lib"
 #
@@ -150,3 +155,4 @@ PATH+="$HOME/gforth-0.7.3/"
 #PATH="$PATH:$HOME/.cargo"
 #PATH+=":/home/adikelsky/eclipse/java-2020-03/eclipse"
 #
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
