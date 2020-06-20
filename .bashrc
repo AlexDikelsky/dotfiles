@@ -141,12 +141,13 @@ PATH+="/awips2/python/bin:"
 PATH+="$HOME/jython2.7.2/bin:"
 PATH+="$HOME/gforth-0.7.3/"
 
+x=$CLASSPATH
+CLASSPATH=".:"
+CLASSPATH+="/usr/local/lib/antlr-4-8-complete.jar:"
+CLASSPATH+=$x
 
-CLASSPATH="/usr/local/lib/antlr-4.8.1-complete.jar:/usr/local/lib/antlr-4.7.1-complete.jar$CLASSPATH"
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.8.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-alias idk='java -jar /usr/local/lib/antlr-4.8-complete.jar'
-alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.8.1-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
-alias grunn='java org.antlr.v4.gui.TestRig'
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
 
 #export PATH="/bin:/home/alex/.bin:/home/alex/.cargo/bin:/sbin:/snap/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/alex/.local/bin/home/alex/.local/lib"
 #
