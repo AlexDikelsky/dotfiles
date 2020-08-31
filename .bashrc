@@ -89,7 +89,7 @@ fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -113,17 +113,50 @@ fi
 
 #Aliases I added
 alias rm='rm -I'
-alias info='info --vi-keys'
-alias sl='sl -e'
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin:/home/dikeal01/.local/bin
+#PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/dikeal01/.fzf/bin:/home/dikeal01/.bin:/home/dikeal01/.local/bin
 
 export EDITOR="vim"
 
-EULER_E=1.691030206757254
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-#Not sure why this doesn't work in my .profile, but this remaps ctrl-l to also ls after clearing the screen
+#Clears the screen, then lists directories
 bind -x '"\C-l": clear; ls'
 
+PATH=""
+PATH+="/usr/local/sbin:"
+PATH+="/usr/local/bin:"
+PATH+="/usr/sbin:"
+PATH+="/usr/bin:"
+PATH+="/sbin:"
+PATH+="/bin:"
+PATH+="/usr/games:"
+PATH+="/usr/local/games:"
+PATH+="$HOME/.fzf/bin:"
+PATH+="$HOME/.bin:"
+PATH+="$HOME/eclipse/java-2020-03/eclipse:"
+PATH+="$HOME/.bin:"
+PATH+="$HOME/j901:"
+PATH+="/awips2/python/bin:"
+PATH+="$HOME/jython2.7.2/bin:"
+PATH+="$HOME/gforth-0.7.3/"
+
+#x=$CLASSPATH
+#CLASSPATH=".:"
+#CLASSPATH+="/usr/local/lib/antlr-4.8-complete.jar:"
+#CLASSPATH+=$x
+##export $CLASSPATH
+
+export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
+
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+
+#export PATH="/bin:/home/alex/.bin:/home/alex/.cargo/bin:/sbin:/snap/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/alex/.local/bin/home/alex/.local/lib"
+#
+## Add J
+#PATH="$PATH:$HOME/j901/jconsole.sh"
+#PATH="$PATH:$HOME/.cargo"
+#PATH+=":/home/adikelsky/eclipse/java-2020-03/eclipse"
+#
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"

@@ -56,4 +56,17 @@ alias j="ijconsole"
 bindkey -s "^L" "clear^Mls^M"
 #bindkey -s '[20~' "That was a P! Nice job!"
 
-export GOPATH=$HOME/go
+PATH=""
+PATH+="/bin:"
+PATH+="$HOME/.bin:"
+PATH+="$HOME/.cargo/bin:"
+PATH+="/sbin:"
+PATH+="/snap/bin:"
+PATH+="/usr/bin:"
+PATH+="/usr/local/bin:"
+PATH+="/usr/local/sbin:"
+PATH+="/usr/sbin:"
+PATH+="$HOME/.local/bin"
+PATH+="$HOME/.local/lib:"
+PATH+="$HOME/j901/"
+

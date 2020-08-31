@@ -1,0 +1,7 @@
+~/.XCompose
+
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key> <g> <l> 			: "λ" lambda # LOWER LAMBDA
+<Multi_key> <g> <e> 			: "ε" epsilon # LOWER EPSILON
+<Multi_key> <e> <s>                     : "∅" emptyset # EMPTY SET
