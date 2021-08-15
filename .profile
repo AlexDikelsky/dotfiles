@@ -42,3 +42,5 @@ PATH="/home/alex/.idris2/bin:$PATH"
 PATH="/home/alex/.local/bin:$PATH"
 
 export PATH="$HOME/.elan/bin:$PATH"
+
+export GCM_CREDENTIAL_STORE=secretservice
