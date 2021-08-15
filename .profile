@@ -8,30 +8,37 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-#chsh alex -s /bin/zsh
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
 
-## if running bash
-#if [ -n "$BASH_VERSION" ]; then
-#    # include .bashrc if it exists
-#    if [ -f "$HOME/.bashrc" ]; then
-#	. "$HOME/.bashrc"
-#    fi
-#fi
-#
-## set PATH so it includes user's private bin if it exists
-#if [ -d "$HOME/bin" ] ; then
-#    PATH="$HOME/bin:$PATH"
-#fi
-#
-## set PATH so it includes user's private bin if it exists
-#if [ -d "$HOME/.local/bin" ] ; then
-#    PATH="$HOME/.local/bin:$PATH"
-#fi
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
-#export PATH="$HOME/.cargo/bin$PATH:$HOME/.bin:"
-#export PATH="/bin:/home/alex/.bin:/home/alex/.cargo/bin:/sbin:/snap/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:"
-export PATH="/bin:/home/alex/.bin:/home/alex/.cargo/bin:/sbin:/snap/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/alex/.local/bin/home/alex/.local/lib"
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
+PATH="/home/alex/.idris2/bin:$PATH"
+. "$HOME/.cargo/env"
 
-# Add J
-PATH="$PATH:$HOME/j901/jconsole.sh"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+
+PATH="/home/alex/.idris2/bin:$PATH"
+PATH="/home/alex/.local/bin:$PATH"
+
+export PATH="$HOME/.elan/bin:$PATH"

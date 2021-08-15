@@ -1,4 +1,0 @@
-#!/bin/bash 
-
-#Stands for Edit Bash
-vim $HOME/.bashrc

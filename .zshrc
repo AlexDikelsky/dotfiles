@@ -37,36 +37,4 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-alias ls="ls --color=auto"
-alias grep="grep --color=auto"
-alias sl="sl -e"
-alias e="vim"
-alias emacs="emacs -mm"  #Maximize emacs automaticly
-alias bc="bc -l -q"
-alias j="ijconsole"
-
-#bindkey '^L' "clear^Mls^M"
-
-#function clear-ls() {
-#    clear
-#    ls
-#    #zle && zle .reset-prompt && zle -R
-#}
-#zle -N clear-ls
 bindkey -s "^L" "clear^Mls^M"
-#bindkey -s '[20~' "That was a P! Nice job!"
-
-PATH=""
-PATH+="/bin:"
-PATH+="$HOME/.bin:"
-PATH+="$HOME/.cargo/bin:"
-PATH+="/sbin:"
-PATH+="/snap/bin:"
-PATH+="/usr/bin:"
-PATH+="/usr/local/bin:"
-PATH+="/usr/local/sbin:"
-PATH+="/usr/sbin:"
-PATH+="$HOME/.local/bin"
-PATH+="$HOME/.local/lib:"
-PATH+="$HOME/j901/"
-
